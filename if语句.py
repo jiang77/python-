@@ -27,10 +27,12 @@ print("num1 =",num1)
 
 # 从控制台输入一个整数，判断是否是偶数
 
-
+'''
 num = int(input("请输入一个整数："))
 if num % 2 == 0:
     print("这是一个偶数")
+'''
+
 
 
 '''
@@ -48,12 +50,14 @@ if-else
 
 '''
 
-
+'''
 num = int(input("请输入一个整数："))
 if num % 2 == 0:
     print("这是一个偶数")
 else:
     print("这是一个奇数")
+'''
+
 
 
 #练习
@@ -61,7 +65,7 @@ else:
 第一题：从控制台输入一个三位数，如果是水仙花数就打印“是水仙花数”，否则打印“不是水仙花数”
         153 = 1^3 + 5^3 + 3^3
 第二题：从控制台输入一个五位数，如果是回文数，就打印“是回文数”，否则打印“不是回文数”
-        11111      12321     12221          个位和万位一样，视为和千位一样。
+        11111      12321     12221          个位和万位一样，十位和千位一样。
 第三题：从控制台输入两个数，输出较大的值
 
 第四题：从控制台输入三个数，输出较大的值
@@ -80,6 +84,7 @@ else:
 
 '''
 
+'''
 num = int(input("请输入一个三位数"))
 a = num % 10   #（表示个位）
 b = num // 10 % 10   #（表示十位：先对10取整，再取余）
@@ -88,3 +93,55 @@ if num == c**3 + b**3 + a**3:
     print("是水仙花数")
 else:
     print("不是水仙花数")
+'''
+
+
+# 第二题
+'''
+num = int(input("请输入一个五位数"))
+a = num % 10   # 个位
+b = num // 10 % 10 # 十位
+c = num // 1000 % 10 # 千位
+d = num // 10000 # 万位
+
+if a == d:
+    if b == c:
+        print("是回文数")
+else:
+    print("不是回文数")
+'''
+
+# 第三题
+'''
+num1 = int(input("请输入一个数："))
+num2 = int(input("请再输入一个数："))
+if num1 > num2:
+    print(num1)
+else:
+    print(num2)
+'''
+
+# 第四题
+'''num1,num2,num3 = map(int,input("请输入3个数，用空格分隔\n").split())
+# num1 = int(input("请输入一个数："))
+# num2 = int(input("请再输入一个数："))
+# num3 = int(input("请再次输入一个数："))
+if num1 > num2:
+    if num1 > num3:
+        print(num1)
+    else:
+        print(num3)
+else:
+    if num2 > num3:
+        print(num2)
+    else:
+        print(num3)'''
+
+
+num1,num2,num3 = map(int,input("请输入3个数，用逗号分隔\n").split(","))
+max = num1
+if num2 > num1:
+    max = num2
+if num3 > max:
+    max = num3
+print("max =", max)
