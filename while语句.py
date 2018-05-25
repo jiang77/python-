@@ -50,6 +50,7 @@ while index < len(str):
 
 
 # 第一题：打印出所有三位数中的水仙花数
+'''
 num = 100
 while num <= 999:
     numList = list(map(int, str(num)))
@@ -57,4 +58,45 @@ while num <= 999:
     #if num == num[0]**3+num[1]**3+num[2]**3:
         print(num)
     num += 1
+'''
+'''
+num = 100
+while num <= 999:
+    a = num % 10
+    b = num // 10 % 10
+    c = num // 100
+    if num == a**3 + b**3 + c**3:
+        print(num)
+    num += 1
+'''
+
+# 第二题
+'''
+num = 10000
+sum = 0
+while num <= 99999:
+    a = num % 10  # 个位
+    b = num // 10 % 10  # 十位
+    c = num // 1000 % 10  # 千位
+    d = num // 10000  # 万位
+    if a == d and b == c:
+        sum += 1
+    num += 1
+print(sum)
+'''
+
+# 第三题
+num = int(input("请输入一个整数："))
+if num == 2:
+    print("是质数")
+index = 2
+while index < num:
+    if num % index == 0:
+        print("不是质数")
+    index += 1
+if index == num:
+    print("是质数")
+
+
+
 
