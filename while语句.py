@@ -86,6 +86,7 @@ print(sum)
 '''
 
 # 第三题
+'''
 num = int(input("请输入一个整数："))
 if num == 2:
     print("是质数")
@@ -96,6 +97,47 @@ while index < num:
     index += 1
 if index == num:
     print("是质数")
+    
+'''
+
+
+# 第六题
+'''
+自做
+str = input("请输入一个字符串：")
+index = 0
+sum = 0
+while index < len(str):
+    if type(int(str[index])) = "int":
+        sum = sum + int(str[index])
+    index += 1
+print(sum)
+'''
+
+'''
+课堂解答
+str = input("请输入一个字符串：")
+index = 0
+sum = 0
+while index < len(str):
+    if str[index] >= "0" and str[index] <= "9":
+        sum += int(str[index])
+    index += 1
+print("sum = %d" % (sum))
+
+'''
+
+
+# 字符串比较大小
+# 从第一个字符开始比较，谁的ASCII值大谁就大，如果相等会比较下一个字符的ASCII值大小，那么谁的值大谁就大
+'''
+print("sunck" < "sanck")
+
+'''
+
+
+
+
 
 
 
