@@ -148,3 +148,54 @@ while num24 < all:
 print(list23)
 
 
+# 12.reverse方法：倒序
+list25 = [1,2,3,4,5]
+list25.reverse()
+print(list25)
+
+# 13.sort方法：排序，升序
+list26 = [2,1,3,5,4]
+list26.sort()
+print(list26)
+
+# 拷贝：浅拷贝，一般叫引用拷贝，把地址拷贝了。
+list27 = [1,2,3,4,5]
+list28 = list27
+list28[1] = 200
+print(list28)      # [1, 200, 3, 4, 5]
+print(list27)      # [1, 200, 3, 4, 5]
+print(id(list28))
+print(id(list27))  # list28和list27的id一样
+
+'''
+内存分为：堆区一个栈区。   
+栈区：一般我们开辟的普通变量都存在栈区，在栈区开辟一个内存空间。栈区特点：程序结束,释放内存空间。
+      空间是系统自动分配。。
+堆区：特点是程序员手动开辟，手动释放。对象都是存在堆区。
+
+'''
+
+# 14.深拷贝：内存的拷贝   （内存、内存地址、变量）
+list29 = [1,2,3,4,5]
+list30 = list29.copy()
+list30[1] = 200
+print(list29)    # [1, 2, 3, 4, 5]
+print(list30)    # [1, 200, 3, 4, 5]
+print(id(list29))
+print(id(list30))  # list29和list30的地址不一样，说明list29和list30不是一个变量
+
+# 15.将元组转成列表
+list31 = list((1,2,3,4,5))
+print(list31)
+
+# 练习：从控制台输入十个数，找出其中第二大的值。
+listNum = []
+
+num = 0
+while num < 10:
+    val = int(input())
+    listNum.append(val)
+    num += 1
+print(listNum)
+
+
