@@ -189,6 +189,7 @@ list31 = list((1,2,3,4,5))
 print(list31)
 
 # 练习：从控制台输入十个数，找出其中第二大的值。
+'''
 listNum = []
 
 num = 0
@@ -197,5 +198,25 @@ while num < 10:
     listNum.append(val)
     num += 1
 print(listNum)
+'''
 
+'''
+a = 123
+list32 = [12,a,[1,2,3]]
+list33 = list32.copy()
+print(list33)
+print(list32)
+print(id(list32))
+print(id(list33))
 
+for i in list32:
+    print(i,)
+    print(id(i))
+for i in list33:
+    print(i)
+    print(id(i))
+
+a = 321
+print(list32[1])
+print(list33[1])
+'''
