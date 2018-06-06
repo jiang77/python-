@@ -206,3 +206,50 @@ print(str36.strip("*"))
 print("a" == "a")   # 结果为true
 
 '''
+
+#20 split(str=""[,num])   功能：以str为分隔符截取字符串，将截出来的放入列表
+# 指定num，则仅截取num个字符串
+str38 = "sunck**is***a**good*man"
+print(str38.split("*"))  # 结果：['sunck', '', 'is', '', '', 'a', '', 'good', 'man']
+print(str38.split("*",3))  # 结果：['sunck', '', 'is', '**a**good*man']
+# 练习：输出单词个数
+list39 = str38.split("*")
+c = 0
+for s in list39:
+    if len(s) > 0:   #单词的长度肯定大于0
+        c += 1
+print(c)
+
+#21 splitlines([keepends])   按照（'\r', '\r\n', '\n'）分隔
+# keepends == True  会保留换行符。keepends默认为False
+str40 = '''sunck is a good man!
+sunck is a nice man!
+sunck is a handsome man!
+'''
+print(str40.splitlines())  # 结果：['sunck is a good man!', 'sunck is a nice man!', 'sunck is a handsome man!']
+print(str40.splitlines(True))  # 结果：['sunck is a good man!\n', 'sunck is a nice man!\n', 'sunck is a handsome man!\n']
+
+# 将list组合成字符串
+#22 join()  以指定的字符串分隔符，将seq中的所有元素组合成一个字符串
+list41 = ['sunck', 'is', 'a', 'good', 'man']
+str42 = " ".join(list41)   # 字符串之间用空格分隔，可以有任意多的分隔符（#@%￥等都可以）
+print(str42)
+
+#23 max()  min()
+str43 = "sunck is a good man!z"
+print(max(str43))
+print(min(str43))  # 结果是个空格
+
+#24  replace(oldstr, newstr, count)
+#用newstr替换oldstr，默认是全部替换。如果指定了count，那么直替换前count个
+str44 = "sunck is a good  good good man"
+str45 = str44.replace("good","nice", 1)
+print(str44)
+print(str45)
+
+# 创建一个字符串映射表
+
+t46 =str. maketrans("good", "nice")  #将"good" 映射成 "nice"
+str47 = "sunck is a good good good man"
+str48 = str47.translate(t46)
+print(str48)
