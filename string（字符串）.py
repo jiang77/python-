@@ -241,15 +241,18 @@ print(max(str43))
 print(min(str43))  # 结果是个空格
 
 #24  replace(oldstr, newstr, count)
-#用newstr替换oldstr，默认是全部替换。如果指定了count，那么直替换前count个
+#用newstr替换oldstr，默认是全部替换。如果指定了count，那么只替换前count个
 str44 = "sunck is a good  good good man"
 str45 = str44.replace("good","nice", 1)
 print(str44)
 print(str45)
 
 # 创建一个字符串映射表
-
 t46 =str. maketrans("good", "nice")  #将"good" 映射成 "nice"
+# 注意：这种映射是将g--n  o--i  o--c  d--e
 str47 = "sunck is a good good good man"
 str48 = str47.translate(t46)
-print(str48)
+print(str48)  #结果:sunck is a ncce ncce ncce man
+
+str49 = "sunck is a good man"
+print(str49.startswith())

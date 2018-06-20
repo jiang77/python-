@@ -51,7 +51,7 @@ tuple6 = (1,2,3,4,5)
 # 是思考：元组真的不能变？
 tuple7 = (1,2,3,4,[5,6,7])
 tuple7[-1][0] = 500
-print(tuple7)    # 结果：(1, 2, 3, 4, [500, 6, 7])  改变的是list
+print(tuple7)      # 结果：(1, 2, 3, 4, [500, 6, 7])  改变的是list
 # tuple7[-1] = [7,8,9]
 # print(tuple7)    # 结果报错：TypeError: 'tuple' object does not support item assignment
 # 注意：元组不能变说的是元组中的元素不能变。如果里面的元素是可变的，那么该元素就可变。
@@ -60,18 +60,18 @@ print(tuple7)    # 结果：(1, 2, 3, 4, [500, 6, 7])  改变的是list
 # 删除元组
 tuple8 = (1,2,3,4,5)
 del tuple8
-# print(tuple8)  # 结果报错：NameError: name 'tuple8' is not defined
+# print(tuple8)    # 结果报错：NameError: name 'tuple8' is not defined
 
 
 
 # 元组的操作
 t7 = (1,2,3)
 t8 = (4,5,6)
-print(t7 + t8)  # 结果：(1, 2, 3, 4, 5, 6)，生成了一个新的元组
+print(t7 + t8)     # 结果：(1, 2, 3, 4, 5, 6)，生成了一个新的元组
 
 # 元组重复
 t10 = (1,2,3)
-print(t10 * 3)  # 结果：(1, 2, 3, 1, 2, 3, 1, 2, 3)
+print(t10 * 3)     # 结果：(1, 2, 3, 1, 2, 3, 1, 2, 3)
 
 # 判断元素是否在元组中
 t11 = (1,2,3)
