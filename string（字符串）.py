@@ -254,5 +254,79 @@ str47 = "sunck is a good good good man"
 str48 = str47.translate(t46)
 print(str48)  #结果:sunck is a ncce ncce ncce man
 
+# startswith(str, start=0, end=len(str))
+# 在给定的范围内，判断是否是以给定的str开头，如果没有指定范围，默认整个字符春。结果是true或false
 str49 = "sunck is a good man"
-print(str49.startswith())
+print(str49.startswith("sunck", 5, 16))
+
+# endswith(str, start=0, end=len(str))
+# 在给定的范围内，判断是否是以给定的str开头，如果没有指定范围，默认整个字符春。结果是true或false
+str50 = "sunck is a nice man"
+print(str50.endswith("man"))
+
+# 编码
+# encode(encoding="utf-8", errors="strict")
+# ignore忽略错误
+str51 = "sunck is a good man凯"
+data52 = str51.encode("utf-8", "ignore")
+print(data52)
+
+# 解码  注意：要与编码时的编码格式一致
+str53 = data52.decode("utf-8")
+print(str53)
+# str53 = data52.decode("gbk", "ignore")
+# print(str53)   由于两种编码格式不一致，会导致解出来的中文有错
+
+# isalpha()
+# 如果字符串中至少有一个字符且所有的字符都是字母，返回True，否则返回False
+str54 = "sunck is a good man"
+print(str54.isalpha())  # 结果：False
+
+# isalnum()
+# 如果字符串中至少有一个字符且所有的字符都是字母或数字返回True,否则返回False
+str55 = "123"
+print(str55.isalnum())
+
+# isupper()
+# 如果字符串中至少有一个英文字符且所有的英文字符都是大写的英文字母返回True否则返回False
+print("ABC".isupper())    # 结果：True
+print("ABC$".isupper())   # 结果：True 
+print("ABC1".isupper())   # 结果：True
+print("1".isupper())      # 结果：False
+print("abC$".isupper())   # 结果：False
+
+# islower()
+# 如果字符串中至少有一个英文字符且所有的英文字符都是小写的英文字母返回True否则返回False
+print("abc".islower())    # 结果：True
+print("abcA".islower())   # 结果：False
+print("1".islower())      # 结果：False
+print("abc1".islower())   # 结果：True
+print("abc$".islower())   # 结果：True
+
+# istitle()
+# 如果字符串是标题化的返回True，否则返回False
+print("sunck is".istitle())      # 结果：False
+print("Sunck is".istitle())      # 结果：False
+print("Sunck Is".istitle())      # 结果：True
+
+# isdigit()
+# 如果字符串中只包含数字字符返回True，否则返回False
+print("123".isdigit())       # 结果：True
+print("123a".isdigit())      # 结果：False
+
+# isnumeric()  同上
+print("123".isnumric())       # 结果：True
+print("123a".isnumric())      # 结果：False
+
+# isdecimal()
+# 字符串中只包含十进制字符
+print("123".isdecimal())
+print("123z".isdecimal())
+
+# isspace()
+#如果字符串中只包含空格，返回True，否则返回False
+print(" ".isspace())
+print("        ",isspace())
+print("\t".isspace())
+print("\n".isspace())
+print("\r".isspace())
