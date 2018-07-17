@@ -224,8 +224,7 @@ print(c)
 # keepends == True  会保留换行符。keepends默认为False
 str40 = '''sunck is a good man!
 sunck is a nice man!
-sunck is a handsome man!
-'''
+sunck is a ha 
 print(str40.splitlines())  # 结果：['sunck is a good man!', 'sunck is a nice man!', 'sunck is a handsome man!']
 print(str40.splitlines(True))  # 结果：['sunck is a good man!\n', 'sunck is a nice man!\n', 'sunck is a handsome man!\n']
 
