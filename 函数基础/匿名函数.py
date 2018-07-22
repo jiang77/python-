@@ -14,3 +14,4 @@ lambda 参数1，参数2，……，参数n：expression
 
 sum = lambda num1, num2:num1+num2     # 用一个变量sum去把函数接收
 print(sum(1,2))
+ 
