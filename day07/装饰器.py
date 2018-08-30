@@ -8,13 +8,15 @@
 def func1():
     print("sunck is a good man")
 
-# 需求：在不改变func1函数的情况下，在其前面减伤一串星号（*）
+# 需求：在不改变func1函数的情况下，在其前面加上一串星号（*）
 
 def outer(func):
     def inner():
         print("*************************")
-        func()
+        func()   #其实在这个地方直接写死为func1()页可以达到我们想要的结果，但是我们并不将其写死
+                 #是因为这个装饰器可能不止用于这一个函数，可能还给其他函数装饰，所以最好不写死
     return inner
 # f是函数func1的加强版本
-f = outer(func1)  # 调用者用f去保存返回的函数inner，所以f就是个函数
+f = outer(func1)  # 调用者用f去保存返回的函数inner，所以f就是个函数。
+                  # outer里面的参数可以为任何你想装饰的函数
 f()

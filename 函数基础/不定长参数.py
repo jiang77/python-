@@ -28,5 +28,5 @@ func2(x=1,y=2,z=3)
 
 
 # 代表可以接收任意参数
-def func3(*args, **kwargs)
+def func3(*args, **kwargs):
     pass  # 代表一个空语句（暂时没想好怎么写就可以使用pass）
