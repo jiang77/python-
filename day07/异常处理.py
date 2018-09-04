@@ -60,3 +60,28 @@ try:
     pass
 except (NameError, ZeroDivisionError):
     print("出现了NameError或ZeroDivisionError")
+
+
+
+'''
+try--except--else特殊的地方
+1.错误其实是class（类），所有的错误都继承自BaseException，所以在捕获的时候，
+  它捕获了该类型的错误，还把子类一网打尽。
+2.跨越多层调用，也能捕获到错误。
+  main调用了func2，func2调用了func1，func1出现了错误，这时只要main捕获到了就可以处理
+def func1(num):
+    print(1 / num)
+def func2(num):
+    func1(num)
+def main():
+    func2(0)
+try:
+    main()
+except ZeroDivisionError as e:
+    print("****")
+# 其实错误不在main而在func1，但是错误也被捕获了。
+
+
+
+
+'''
