@@ -4,7 +4,10 @@ age2 = 19
 age3 = 27
 age4 = 36
 age5 = 45
+age6 = 56
 print((age1 + age2 + age3 + age4 + age5) / 5)
+
+
 
 # 思考：要存储100个人的年龄
 # 解决：使用列表
